@@ -1,48 +1,71 @@
-# Dragonfly Real Estate Photography — 2026 rebuild
+# Jake Debiase — Aerial Photography
 
-Static site. No JavaScript, no webfonts, no build step, no dependencies.
-Deploy by dropping the folder on any static host.
+Portfolio + booking site. Static HTML/CSS/JS, deployed to GitHub Pages by a
+GitHub Action that also builds the photo gallery automatically.
 
-## Asset manifest
+## How Jake adds photos (no code, ever)
 
-Push files to these exact paths. Layout holds either way — slots render as
-neutral gray blocks until the file exists (`object-fit: cover`, so any
-resolution works; targets below are guides).
+Drop image files into a category folder and get them onto `main`:
 
-| Path | Used for | Aspect | Target size |
-|---|---|---|---|
-| `assets/img/hero.jpg` | Top photo | 16:9 | 2400×1350 |
-| `assets/img/work/01.jpg` … `12.jpg` | Work grid | 3:2 | 1600×1067 |
-| `assets/img/portrait.jpg` | About | 4:5 | 1000×1250 |
-| `assets/img/walkthrough-poster.jpg` | Video poster | 16:9 | 1600×900 |
-| `assets/img/reel-poster.jpg` | Reel poster | 9:16 | 900×1600 |
-| `assets/video/walkthrough.mp4` | Walkthrough sample | 16:9 | H.264, ≤ 25 MB |
-| `assets/video/reel.mp4` | Reel sample | 9:16 | H.264, ≤ 15 MB |
+```
+photos/
+  aerial/
+  real-estate/
+  events/
+  automotive/
+```
 
-The `alt` text on each work slot describes the intended shot type
-(exterior, kitchen, drone, twilight, etc.). Reorder freely; update alts to
-match the real photos when you push.
+Within ~2 minutes of a push, the site rebuilds itself: images are resized
+for web (originals can be full-size drone shots, even iPhone HEIC), thumbnails
+are generated, and the gallery updates with category filter buttons.
 
-## Content notes
+Easiest paths, in order:
 
-- All prices, packages, turnaround claims, and contact info were pulled from
-  the live site (dragonflyphotomedia.com, fetched July 2026). Verify with
-  Derek before launch — especially the sq-ft tiers, which had copy/paste
-  errors in the descriptions on the current site (normalized here).
-- Copy is deliberately plain. Rewrite at will; structure doesn't depend on it.
-- "Book a shoot" currently points to `mailto:`. Swap to Derek's scheduler
-  (the current site has a /book-shoot page) when you know what he uses.
-- Not carried over from the old site: blog, rental investment calculator,
-  Realtor Branding external link, cart/commerce. Add back if wanted.
+1. **Tell Claude** — "add these photos to events" with the files. Done.
+2. **GitHub web upload** — open the repo → `photos/` → the category folder →
+   `Add file → Upload files` → drag images in → `Commit changes`.
+3. **Locally** — copy files into `photos/<category>/`, commit, push.
 
-- The head carries Open Graph tags, a canonical URL, and LocalBusiness
-  JSON-LD, all pointing at `dragonflyphotomedia.com`. If the site launches on
-  a different domain, update those absolute URLs. Verify the phone number and
-  founding date in the JSON-LD along with the rest of the pulled content.
+Notes:
+- Filenames become captions: `sunset-over-marina.jpg` → "Sunset over marina".
+  Camera prefixes like `DJI_0231` are stripped automatically.
+- Delete a file from `photos/` and it disappears from the site the same way.
+- New folder under `photos/` = new category, automatically.
+- Placeholder images show until the first real photo lands, then they're
+  dropped from the build automatically.
 
-## SEO note
+## One-time setup still needed (requires Jake's GitHub login)
 
-The current Squarespace site has one page per service (HDR, drone, Matterport,
-virtual staging, etc.) ranking on service keywords. This rebuild is one page.
-If organic matters, split `#prices` sections back into `/services/*` pages
-with this same stylesheet before launch, and 301 the old URLs.
+1. **Make the repo public** — Settings → General → Danger Zone → Change
+   visibility → Public. GitHub Pages is free only on public repos, and the
+   deploy will fail until this is done.
+2. After that, re-run the failed "Build and deploy site" workflow (Actions
+   tab → the failed run → Re-run all jobs) or just push anything. The
+   workflow enables Pages by itself. Site lands at
+   `https://jdebiase7179.github.io/portfoliosite/`.
+
+## Content TODOs (placeholders in place, swap when known)
+
+- **Email** — `hello@example.com` in `index.html` (2 places). Replace with
+  Jake's real booking email.
+- **Hero photo** — drop Jake's best shot at `assets/img/hero.jpg` (16:9-ish,
+  ~2400px wide). Gradient placeholder shows until then.
+- **Portrait** — `assets/img/portrait.jpg` (4:5). Same deal.
+- **Location** — copy avoids naming a city. Once Jake knows his service
+  area, add it to the hero lede + title/meta description for local SEO.
+- **FAA Part 107** — the site claims it (as "licensed drone pilot" +
+  facts strip). Flying drones commercially legally requires this cert —
+  confirm Jake actually has it before launch, or remove the claim.
+- **"Insured" claim in About** — same: verify or remove.
+- **Custom domain** — later, if wanted: buy domain → repo Settings → Pages →
+  Custom domain. Then add proper `og:url`/`og:image` absolute URLs.
+
+## Local development
+
+```
+pip install pillow && python3 scripts/build_gallery.py
+python3 -m http.server -d _site
+```
+
+`_site/` is the build output (gitignored). The site itself is just
+`index.html`, `styles.css`, `app.js` — no framework, no npm.

@@ -3,222 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dragonfly Real Estate Photography — Asheville, NC</title>
-<meta name="description" content="Real estate photography, video, drone, 3D tours, and floor plans for Asheville and Western North Carolina. Next-day delivery. Published prices.">
-<link rel="canonical" href="https://dragonflyphotomedia.com/">
+<title>Jake Debiase — Aerial Photography</title>
+<meta name="description" content="Aerial photography and video for real estate, events, and automotive. Licensed drone pilot Jake Debiase. Book a flight.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Dragonfly Real Estate Photography — Asheville, NC">
-<meta property="og:description" content="Real estate photography, video, drone, 3D tours, and floor plans for Asheville and Western North Carolina. Next-day delivery. Published prices.">
-<meta property="og:url" content="https://dragonflyphotomedia.com/">
-<meta property="og:image" content="https://dragonflyphotomedia.com/assets/img/hero.jpg">
-<meta name="theme-color" content="#1F4D3F">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231F4D3F'/%3E%3Ctext x='16' y='23' font-family='-apple-system,Helvetica,Arial,sans-serif' font-size='19' font-weight='700' fill='%23FAFAF7' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Jake Debiase — Aerial Photography">
+<meta property="og:description" content="Aerial photography and video for real estate, events, and automotive. Book a flight.">
+<meta name="theme-color" content="#0A66E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A66E8'/%3E%3Ctext x='16' y='22.5' font-family='Helvetica,Arial,sans-serif' font-size='15' font-weight='700' fill='%23fff' text-anchor='middle'%3EJD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Dragonfly Real Estate Photography",
-  "url": "https://dragonflyphotomedia.com/",
-  "image": "https://dragonflyphotomedia.com/assets/img/hero.jpg",
-  "email": "dragonflyphotomedia@gmail.com",
-  "telephone": "+14133201001",
-  "founder": "Derek Goodwin",
-  "foundingDate": "2024",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Asheville",
-    "addressRegion": "NC",
-    "addressCountry": "US"
-  },
-  "areaServed": "Western North Carolina",
-  "sameAs": ["https://www.instagram.com/dragonfly.photomedia/"]
-}
-</script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <a class="wordmark" href="/">Dragonfly Real Estate Photography</a>
+<header class="site-header" id="top">
+  <a class="wordmark" href="#top">Jake Debiase<span> / Aerial</span></a>
   <nav aria-label="Main">
     <a href="#work">Work</a>
-    <a href="#prices">Prices</a>
+    <a href="#services">Services</a>
     <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a class="button" href="mailto:dragonflyphotomedia@gmail.com?subject=Booking%20request">Book a shoot</a>
+    <a class="button" href="#contact">Book a flight</a>
   </nav>
 </header>
 
 <main id="main">
 
-<section class="intro">
-  <h1>Real estate photography in Asheville</h1>
-  <p>Photos, video, drone, 3D tours, and floor plans for listings across Western North Carolina. Most media is delivered the next day. Every shoot includes a single-property website.</p>
-  <p><a class="button" href="mailto:dragonflyphotomedia@gmail.com?subject=Booking%20request">Book a shoot</a> <a class="text-link" href="#prices">See prices</a></p>
+<section class="hero">
+  <div class="hero-inner">
+    <p class="kicker">Licensed drone pilot · Photo + video</p>
+    <h1>See it<br><em>from above.</em></h1>
+    <p class="lede">Aerial photography and video for real estate, events, and automotive — flown, shot, and delivered by Jake Debiase.</p>
+    <p class="hero-cta">
+      <a class="button" href="#contact">Book a flight</a>
+      <a class="text-link" href="#work">See the work ↓</a>
+    </p>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <img src="assets/img/hero.jpg" alt="" id="hero-img">
+  </div>
 </section>
 
-<figure class="hero-photo">
-  <img src="assets/img/hero.jpg" alt="Drone photograph of a mountain property near Asheville at sunset" width="2400" height="1350">
-</figure>
+<section id="work" class="work reveal">
+  <div class="section-head">
+    <h2>Work</h2>
+    <div class="filters" role="group" aria-label="Filter gallery by category" id="filters"></div>
+  </div>
+  <div class="gallery" id="gallery" aria-live="polite"></div>
+  <p class="note" id="gallery-empty" hidden>New work coming soon — follow along or <a href="#contact">book a shoot</a>.</p>
+</section>
 
-<section class="facts" aria-label="Service facts">
+<section id="services" class="services reveal">
+  <h2>Services</h2>
+  <div class="service-row">
+    <div class="service">
+      <h3>Real estate</h3>
+      <p>Aerials that show the lot, the setting, and the approach — the shots a ground camera can't get. Photos and video clips sized for MLS and social.</p>
+    </div>
+    <div class="service">
+      <h3>Events</h3>
+      <p>Festivals, races, venues, and gatherings from the air. Establishing shots, crowd scale, and highlight reels.</p>
+    </div>
+    <div class="service">
+      <h3>Automotive</h3>
+      <p>Rolling shots, top-downs, and location sets for cars and builds. Clean footage for listings, shops, and socials.</p>
+    </div>
+  </div>
+  <p class="note">Something else in mind? <a href="#contact">Ask</a> — if it can be shot from the air, it's on the table.</p>
+</section>
+
+<section class="facts reveal" aria-label="Quick facts">
   <ul>
-    <li>Photos delivered next day</li>
-    <li>Available seven days a week</li>
-    <li>Travel included within 30 minutes of Asheville</li>
-    <li>Veteran-owned, founded 2024</li>
+    <li>FAA Part 107 certified</li>
+    <li>Photo + 4K video</li>
+    <li>Fast turnaround</li>
+    <li>Local &amp; independent</li>
   </ul>
 </section>
 
-<section id="work">
-  <h2>Recent work</h2>
-  <div class="work-grid">
-    <figure><img src="assets/img/work/01.jpg" alt="Exterior of a listing, front elevation" loading="lazy"></figure>
-    <figure><img src="assets/img/work/02.jpg" alt="Kitchen, HDR interior" loading="lazy"></figure>
-    <figure><img src="assets/img/work/03.jpg" alt="Drone view of property and lot" loading="lazy"></figure>
-    <figure><img src="assets/img/work/04.jpg" alt="Living room, HDR interior" loading="lazy"></figure>
-    <figure><img src="assets/img/work/05.jpg" alt="Twilight exterior with interior lights on" loading="lazy"></figure>
-    <figure><img src="assets/img/work/06.jpg" alt="Primary bedroom" loading="lazy"></figure>
-    <figure><img src="assets/img/work/07.jpg" alt="Deck with mountain view" loading="lazy"></figure>
-    <figure><img src="assets/img/work/08.jpg" alt="Bathroom, HDR interior" loading="lazy"></figure>
-    <figure><img src="assets/img/work/09.jpg" alt="Aerial view showing property lines" loading="lazy"></figure>
-    <figure><img src="assets/img/work/10.jpg" alt="Dining room" loading="lazy"></figure>
-    <figure><img src="assets/img/work/11.jpg" alt="Exterior detail" loading="lazy"></figure>
-    <figure><img src="assets/img/work/12.jpg" alt="Drone view at dusk" loading="lazy"></figure>
-  </div>
-</section>
-
-<section id="video">
-  <h2>Video</h2>
-  <div class="video-row">
-    <figure class="video-wide">
-      <video controls preload="metadata" poster="assets/img/walkthrough-poster.jpg">
-        <source src="assets/video/walkthrough.mp4" type="video/mp4">
-      </video>
-      <figcaption>Walkthrough video</figcaption>
-    </figure>
-    <figure class="video-vertical">
-      <video controls preload="metadata" poster="assets/img/reel-poster.jpg">
-        <source src="assets/video/reel.mp4" type="video/mp4">
-      </video>
-      <figcaption>Social media reel, vertical format</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section id="packages">
-  <h2>Packages</h2>
-  <div class="package-row">
-    <div class="package">
-      <h3>Social Media</h3>
-      <p class="price">$275</p>
-      <ul>
-        <li>Interior and exterior photos</li>
-        <li>One-minute vertical reel</li>
-        <li>Drone photography</li>
-      </ul>
-    </div>
-    <div class="package">
-      <h3>MLS Optimized</h3>
-      <p class="price">$350</p>
-      <ul>
-        <li>Interior and exterior photos</li>
-        <li>Drone photography</li>
-        <li>Floor plans</li>
-        <li>Zillow 3D walkthrough</li>
-      </ul>
-    </div>
-    <div class="package">
-      <h3>Deluxe</h3>
-      <p class="price">$700</p>
-      <ul>
-        <li>HDR photography</li>
-        <li>Walkthrough video</li>
-        <li>Drone photography</li>
-        <li>Zillow 3D tour</li>
-        <li>Floor plans</li>
-      </ul>
-    </div>
-  </div>
-  <p class="note">Every package includes a single-property website.</p>
-</section>
-
-<section id="prices">
-  <h2>A la carte prices</h2>
-
-  <h3>HDR photography</h3>
-  <table>
-    <thead>
-      <tr><th scope="col">Property size</th><th scope="col" class="num">Price</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Up to 1,500 sq ft</td><td class="num">$165</td></tr>
-      <tr><td>1,501–2,500 sq ft</td><td class="num">$180</td></tr>
-      <tr><td>2,501–3,500 sq ft</td><td class="num">$200</td></tr>
-      <tr><td>3,501–5,000 sq ft</td><td class="num">$250</td></tr>
-      <tr><td>Over 5,000 sq ft</td><td class="num">$275</td></tr>
-    </tbody>
-  </table>
-  <p class="note">Delivered within 24 hours.</p>
-
-  <h3>3D tour</h3>
-  <table>
-    <thead>
-      <tr><th scope="col">Property size</th><th scope="col" class="num">Price</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Up to 1,500 sq ft</td><td class="num">$125</td></tr>
-      <tr><td>1,501–2,500 sq ft</td><td class="num">$150</td></tr>
-      <tr><td>2,501–3,500 sq ft</td><td class="num">$200</td></tr>
-      <tr><td>3,501–5,000 sq ft</td><td class="num">$225</td></tr>
-      <tr><td>Over 5,000 sq ft</td><td class="num">$300</td></tr>
-    </tbody>
-  </table>
-  <p class="note">Delivered within 24 hours. Hosted for six months, with an embed code and a direct link for MLS and social media.</p>
-
-  <h3>Everything else</h3>
-  <table>
-    <thead>
-      <tr><th scope="col">Service</th><th scope="col" class="num">Price</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Drone photography</td><td class="num">$150</td></tr>
-      <tr><td>Property lines drawn on a drone photo</td><td class="num">$5 per image</td></tr>
-      <tr><td>One-minute social media reel</td><td class="num">$150</td></tr>
-      <tr><td>Drone footage added to a reel</td><td class="num">$50</td></tr>
-      <tr><td>Floor plans</td><td class="num">$50</td></tr>
-      <tr><td>Twilight photos</td><td class="num">$175</td></tr>
-      <tr><td>Virtual twilight</td><td class="num">$25 per photo</td></tr>
-      <tr><td>Virtual staging</td><td class="num">$45 per photo</td></tr>
-    </tbody>
-  </table>
-  <p class="note">Travel within 30 minutes of Asheville is included. Beyond that, travel is $50 per hour. For anything not listed here, <a href="mailto:dragonflyphotomedia@gmail.com?subject=Quote%20request">ask for a quote</a>.</p>
-</section>
-
-<section id="about" class="about">
+<section id="about" class="about reveal">
   <figure class="portrait">
-    <img src="assets/img/portrait.jpg" alt="Derek Goodwin, photographer" loading="lazy">
+    <img src="assets/img/portrait.jpg" alt="Jake Debiase" loading="lazy" id="portrait-img">
   </figure>
   <div>
     <h2>About</h2>
-    <p>Dragonfly Real Estate Photography is run by Derek Goodwin, a photographer based in Asheville, North Carolina. The business is veteran-owned and was founded in 2024. It serves listings across Western North Carolina.</p>
-    <p><a href="https://www.instagram.com/dragonfly.photomedia/">Instagram</a></p>
+    <p>Jake Debiase is a drone pilot and photographer shooting aerial photo and video for local businesses — real estate listings, events, and automotive work.</p>
+    <p>Every shoot is flown legally and insured, and media is delivered ready to post.</p>
   </div>
 </section>
 
-<section id="contact">
-  <h2>Book a shoot</h2>
-  <p>Email <a href="mailto:dragonflyphotomedia@gmail.com?subject=Booking%20request">dragonflyphotomedia@gmail.com</a> or call <a href="tel:+14133201001">(413) 320-1001</a>.</p>
-  <p>Include the address, square footage, and the services you need. You will get a reply the same day.</p>
+<section id="contact" class="contact reveal">
+  <h2>Book a flight</h2>
+  <p class="contact-big"><a href="mailto:hello@example.com?subject=Booking%20request">hello@example.com</a></p>
+  <p>Tell me what you're shooting, where, and when — you'll get a reply the same day.</p>
 </section>
 
 </main>
 
 <footer>
-  <p>© 2026 Derek Pashupa Goodwin, LLC · <a href="https://dragonflyphotomedia.com/privacy-policy">Privacy policy</a></p>
+  <p>© 2026 Jake Debiase · Aerial Photography</p>
+  <a href="#top">Back to top ↑</a>
 </footer>
 
+<dialog class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lb-close" aria-label="Close">✕</button>
+  <button class="lightbox-nav prev" id="lb-prev" aria-label="Previous photo">‹</button>
+  <img id="lb-img" src="" alt="">
+  <button class="lightbox-nav next" id="lb-next" aria-label="Next photo">›</button>
+  <p class="lightbox-caption" id="lb-caption"></p>
+</dialog>
+
+<script src="app.js"></script>
 </body>
 </html>
