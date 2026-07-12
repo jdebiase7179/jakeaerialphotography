@@ -1,7 +1,7 @@
 /* Gallery is data-driven: assets/gallery.json is generated from the photos/
    folder by scripts/build_gallery.py (run by GitHub Actions on every push). */
 
-const state = { items: [], filter: "all", lightboxIndex: 0 };
+const state = { items: [], filter: "all", lightboxItems: [], lightboxIndex: 0 };
 
 const $ = (id) => document.getElementById(id);
 
@@ -49,12 +49,8 @@ function visibleItems() {
   return state.items.filter((i) => i.category === state.filter);
 }
 
-function renderGallery() {
-  const gallery = $("gallery");
-  const items = visibleItems();
-  gallery.innerHTML = "";
-  $("gallery-empty").hidden = items.length > 0;
-
+function renderInto(container, items) {
+  container.innerHTML = "";
   items.forEach((item, i) => {
     const fig = document.createElement("figure");
     fig.dataset.category = item.category || "";
@@ -65,26 +61,33 @@ function renderGallery() {
     img.alt = item.alt || "";
     img.loading = "lazy";
     fig.appendChild(img);
-    fig.addEventListener("click", () => openLightbox(i));
+    fig.addEventListener("click", () => openLightbox(items, i));
     fig.tabIndex = 0;
     fig.setAttribute("role", "button");
     fig.setAttribute("aria-label", "View larger: " + (item.alt || "photo"));
     fig.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLightbox(i); }
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLightbox(items, i); }
     });
-    gallery.appendChild(fig);
+    container.appendChild(fig);
   });
 }
 
+function renderGallery() {
+  const items = visibleItems();
+  renderInto($("gallery"), items);
+  $("gallery-empty").hidden = items.length > 0;
+}
+
 /* Lightbox */
-function openLightbox(index) {
+function openLightbox(items, index) {
+  state.lightboxItems = items;
   state.lightboxIndex = index;
   updateLightbox();
   $("lightbox").showModal();
 }
 
 function updateLightbox() {
-  const items = visibleItems();
+  const items = state.lightboxItems;
   const item = items[state.lightboxIndex];
   if (!item) return;
   const img = $("lb-img");
@@ -110,7 +113,8 @@ function updateLightbox() {
 }
 
 function stepLightbox(delta) {
-  const n = visibleItems().length;
+  const n = state.lightboxItems.length;
+  if (!n) return;
   state.lightboxIndex = (state.lightboxIndex + delta + n) % n;
   updateLightbox();
 }
