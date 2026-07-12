@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jdebiase7179.github.io/jakeaerialphotography/sitemap.xml
+Sitemap: https://jdaerialphotography.com/sitemap.xml
