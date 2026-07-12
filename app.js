@@ -57,6 +57,7 @@ function renderGallery() {
 
   items.forEach((item, i) => {
     const fig = document.createElement("figure");
+    fig.dataset.category = item.category || "";
     if (item.w && item.h && item.w / item.h > 2) fig.classList.add("wide");
     if (item.type === "video") fig.classList.add("is-video");
     const img = document.createElement("img");

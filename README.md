@@ -1,4 +1,4 @@
-# Jake Debiase — Aerial Photography
+# Jake DeBiase — Aerial Photography
 
 Portfolio + booking site. Static HTML/CSS/JS, deployed to GitHub Pages by a
 GitHub Action that also builds the photo gallery automatically.
