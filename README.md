@@ -9,7 +9,6 @@ Drop image or video files into a category folder and get them onto `main`:
 
 ```
 photos/
-  aerial/
   real-estate/
   events/
   automotive/

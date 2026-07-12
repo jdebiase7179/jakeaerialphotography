@@ -39,7 +39,6 @@ MAX_VIDEO_MB = 90  # GitHub rejects files over 100 MB anyway
 # Folder name -> label shown on the filter buttons. Folders not listed here
 # still work; they get a title-cased label automatically.
 CATEGORY_LABELS = {
-    "aerial": "Aerial",
     "real-estate": "Real Estate",
     "events": "Events",
     "automotive": "Automotive",

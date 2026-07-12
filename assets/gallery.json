@@ -1,32 +1,5 @@
 [
  {
-  "src": "assets/placeholder/p01.svg",
-  "thumb": "assets/placeholder/p01.svg",
-  "alt": "Aerial placeholder \u2014 Jake's photo goes here",
-  "category": "aerial",
-  "categoryLabel": "Aerial",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p02.svg",
-  "thumb": "assets/placeholder/p02.svg",
-  "alt": "Aerial placeholder \u2014 Jake's photo goes here",
-  "category": "aerial",
-  "categoryLabel": "Aerial",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p03.svg",
-  "thumb": "assets/placeholder/p03.svg",
-  "alt": "Aerial placeholder \u2014 Jake's photo goes here",
-  "category": "aerial",
-  "categoryLabel": "Aerial",
-  "w": 1200,
-  "h": 800
- },
- {
   "src": "assets/placeholder/p04.svg",
   "thumb": "assets/placeholder/p04.svg",
   "alt": "Real Estate placeholder \u2014 Jake's photo goes here",
