@@ -1,20 +1,29 @@
 [
  {
-  "src": "assets/gallery/aerial/IMG_2831.jpg",
-  "thumb": "assets/gallery/aerial/IMG_2831_thumb.jpg",
-  "w": 1179,
-  "h": 649,
-  "alt": "Aerial \u2014 Photo",
-  "category": "aerial",
-  "categoryLabel": "Aerial"
+  "src": "assets/gallery/landscapes/placeholder-landscape.jpg",
+  "thumb": "assets/gallery/landscapes/placeholder-landscape_thumb.jpg",
+  "w": 1600,
+  "h": 1000,
+  "alt": "Landscapes \u2014 Placeholder landscape",
+  "category": "landscapes",
+  "categoryLabel": "Landscapes"
  },
  {
-  "src": "assets/gallery/aerial/IMG_2825.jpg",
-  "thumb": "assets/gallery/aerial/IMG_2825_thumb.jpg",
+  "src": "assets/gallery/real-estate/IMG_2831.jpg",
+  "thumb": "assets/gallery/real-estate/IMG_2831_thumb.jpg",
+  "w": 1179,
+  "h": 649,
+  "alt": "Real Estate \u2014 Photo",
+  "category": "real-estate",
+  "categoryLabel": "Real Estate"
+ },
+ {
+  "src": "assets/gallery/real-estate/IMG_2825.jpg",
+  "thumb": "assets/gallery/real-estate/IMG_2825_thumb.jpg",
   "w": 1179,
   "h": 638,
-  "alt": "Aerial \u2014 Photo",
-  "category": "aerial",
-  "categoryLabel": "Aerial"
+  "alt": "Real Estate \u2014 Photo",
+  "category": "real-estate",
+  "categoryLabel": "Real Estate"
  }
 ]
