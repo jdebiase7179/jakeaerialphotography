@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#6FAAF0"/><stop offset="0.55" stop-color="#A9CDF6"/><stop offset="1" stop-color="#DCE8DC"/>
+</linearGradient></defs>
+<rect width="1200" height="800" fill="url(#g)"/>
+<circle cx="270" cy="197" r="52" fill="#FFFFFF" opacity="0.55"/>
+<path d="M0 583 L300 551 L620 597 L900 581 L1200 583 L1200 800 L0 800 Z" fill="#2E3B33" opacity="0.16"/>
+<text x="60" y="740" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#0E1214" opacity="0.35">Aerial — placeholder</text>
+</svg>

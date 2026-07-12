@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#8E7BE8"/><stop offset="0.55" stop-color="#BBAAF2"/><stop offset="1" stop-color="#E3DDF0"/>
+</linearGradient></defs>
+<rect width="1200" height="800" fill="url(#g)"/>
+<circle cx="690" cy="239" r="52" fill="#FFFFFF" opacity="0.55"/>
+<path d="M0 601 L300 597 L620 599 L900 567 L1200 661 L1200 800 L0 800 Z" fill="#2E3B33" opacity="0.16"/>
+<text x="60" y="740" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#0E1214" opacity="0.35">Events — placeholder</text>
+</svg>

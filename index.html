@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jake Debiase — Aerial Photography</title>
+<meta name="description" content="Aerial photography and video for real estate, events, and automotive. Licensed drone pilot Jake Debiase. Book a flight.">
+<link rel="canonical" href="https://jdebiase7179.github.io/portfoliosite/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jake Debiase — Aerial Photography">
+<meta property="og:description" content="Aerial photography and video for real estate, events, and automotive. Book a flight.">
+<meta property="og:url" content="https://jdebiase7179.github.io/portfoliosite/">
+<meta property="og:image" content="https://jdebiase7179.github.io/portfoliosite/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A66E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A66E8'/%3E%3Ctext x='16' y='22.5' font-family='Helvetica,Arial,sans-serif' font-size='15' font-weight='700' fill='%23fff' text-anchor='middle'%3EJD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <a class="wordmark" href="#top">Jake Debiase<span> / Aerial</span></a>
+  <nav aria-label="Main">
+    <a href="#work">Work</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a class="button" href="#contact">Book a flight</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="kicker">Licensed drone pilot · Photo + video</p>
+    <h1>See it<br><em>from above.</em></h1>
+    <p class="lede">Aerial photography and video for real estate, events, and automotive — flown, shot, and delivered by Jake Debiase.</p>
+    <p class="hero-cta">
+      <a class="button" href="#contact">Book a flight</a>
+      <a class="text-link" href="#work">See the work ↓</a>
+    </p>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <img src="assets/img/hero.jpg" alt="" id="hero-img">
+  </div>
+</section>
+
+<section id="work" class="work reveal">
+  <div class="section-head">
+    <h2>Work</h2>
+    <div class="filters" role="group" aria-label="Filter gallery by category" id="filters"></div>
+  </div>
+  <div class="gallery" id="gallery" aria-live="polite"></div>
+  <p class="note" id="gallery-empty" hidden>New work coming soon — follow along or <a href="#contact">book a shoot</a>.</p>
+</section>
+
+<section id="services" class="services reveal">
+  <h2>Services</h2>
+  <div class="service-row">
+    <div class="service">
+      <h3>Real estate</h3>
+      <p>Aerials that show the lot, the setting, and the approach — the shots a ground camera can't get. Photos and video clips sized for MLS and social.</p>
+    </div>
+    <div class="service">
+      <h3>Events</h3>
+      <p>Festivals, races, venues, and gatherings from the air. Establishing shots, crowd scale, and highlight reels.</p>
+    </div>
+    <div class="service">
+      <h3>Automotive</h3>
+      <p>Rolling shots, top-downs, and location sets for cars and builds. Clean footage for listings, shops, and socials.</p>
+    </div>
+  </div>
+  <p class="note">Something else in mind? <a href="#contact">Ask</a> — if it can be shot from the air, it's on the table.</p>
+</section>
+
+<section class="facts reveal" aria-label="Quick facts">
+  <ul>
+    <li>FAA Part 107 certified</li>
+    <li>Photo + 4K video</li>
+    <li>Fast turnaround</li>
+    <li>Local &amp; independent</li>
+  </ul>
+</section>
+
+<section id="about" class="about reveal">
+  <figure class="portrait">
+    <img src="assets/img/portrait.jpg" alt="Jake Debiase" loading="lazy" id="portrait-img">
+  </figure>
+  <div>
+    <h2>About</h2>
+    <p>Jake Debiase is a drone pilot and photographer shooting aerial photo and video for local businesses — real estate listings, events, and automotive work.</p>
+    <p>Every shoot is flown legally and insured, and media is delivered ready to post.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact reveal">
+  <h2>Book a flight</h2>
+  <p class="contact-big"><a href="mailto:hello@example.com?subject=Booking%20request">hello@example.com</a></p>
+  <p>Tell me what you're shooting, where, and when — you'll get a reply the same day.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Jake Debiase · Aerial Photography</p>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+<dialog class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lb-close" aria-label="Close">✕</button>
+  <button class="lightbox-nav prev" id="lb-prev" aria-label="Previous photo">‹</button>
+  <img id="lb-img" src="" alt="">
+  <video id="lb-video" controls playsinline hidden></video>
+  <button class="lightbox-nav next" id="lb-next" aria-label="Next photo">›</button>
+  <p class="lightbox-caption" id="lb-caption"></p>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
