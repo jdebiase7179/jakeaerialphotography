@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#4B7A9E"/><stop offset="0.55" stop-color="#8FB4C9"/><stop offset="1" stop-color="#D7DBC3"/>
+</linearGradient></defs>
+<rect width="1200" height="800" fill="url(#g)"/>
+<circle cx="620" cy="160" r="46" fill="#FFFFFF" opacity="0.5"/>
+<path d="M0 580 L240 500 L480 600 L720 470 L960 590 L1200 520 L1200 800 L0 800 Z" fill="#2E3B33" opacity="0.22"/>
+<path d="M0 670 L300 645 L620 675 L900 635 L1200 660 L1200 800 L0 800 Z" fill="#2E3B33" opacity="0.16"/>
+<text x="60" y="740" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#0E1214" opacity="0.35">Landscapes — placeholder</text>
+</svg>

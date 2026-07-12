@@ -43,6 +43,7 @@ CATEGORY_LABELS = {
     "real-estate": "Real Estate",
     "events": "Events",
     "automotive": "Automotive",
+    "landscapes": "Landscapes",
 }
 
 WEB_EDGE = 2000   # long edge for lightbox image

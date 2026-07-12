@@ -13,6 +13,7 @@ photos/
   real-estate/
   events/
   automotive/
+  landscapes/
 ```
 
 Within ~2 minutes of a push, the site rebuilds itself: images are resized

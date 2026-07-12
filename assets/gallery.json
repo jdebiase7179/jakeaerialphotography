@@ -88,5 +88,32 @@
   "categoryLabel": "Automotive",
   "w": 1200,
   "h": 800
+ },
+ {
+  "src": "assets/placeholder/p11.svg",
+  "thumb": "assets/placeholder/p11.svg",
+  "alt": "Landscapes placeholder \u2014 Jake's photo goes here",
+  "category": "landscapes",
+  "categoryLabel": "Landscapes",
+  "w": 1200,
+  "h": 800
+ },
+ {
+  "src": "assets/placeholder/p12.svg",
+  "thumb": "assets/placeholder/p12.svg",
+  "alt": "Landscapes placeholder \u2014 Jake's photo goes here",
+  "category": "landscapes",
+  "categoryLabel": "Landscapes",
+  "w": 1200,
+  "h": 800
+ },
+ {
+  "src": "assets/placeholder/p13.svg",
+  "thumb": "assets/placeholder/p13.svg",
+  "alt": "Landscapes placeholder \u2014 Jake's photo goes here",
+  "category": "landscapes",
+  "categoryLabel": "Landscapes",
+  "w": 1200,
+  "h": 800
  }
 ]
