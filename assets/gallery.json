@@ -1,119 +1,20 @@
 [
  {
-  "src": "assets/placeholder/p01.svg",
-  "thumb": "assets/placeholder/p01.svg",
-  "alt": "Aerial placeholder \u2014 Jake's photo goes here",
+  "src": "assets/gallery/aerial/IMG_2831.jpg",
+  "thumb": "assets/gallery/aerial/IMG_2831_thumb.jpg",
+  "w": 1179,
+  "h": 649,
+  "alt": "Aerial \u2014 Photo",
   "category": "aerial",
-  "categoryLabel": "Aerial",
-  "w": 1200,
-  "h": 800
+  "categoryLabel": "Aerial"
  },
  {
-  "src": "assets/placeholder/p02.svg",
-  "thumb": "assets/placeholder/p02.svg",
-  "alt": "Aerial placeholder \u2014 Jake's photo goes here",
+  "src": "assets/gallery/aerial/IMG_2825.jpg",
+  "thumb": "assets/gallery/aerial/IMG_2825_thumb.jpg",
+  "w": 1179,
+  "h": 638,
+  "alt": "Aerial \u2014 Photo",
   "category": "aerial",
-  "categoryLabel": "Aerial",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p03.svg",
-  "thumb": "assets/placeholder/p03.svg",
-  "alt": "Aerial placeholder \u2014 Jake's photo goes here",
-  "category": "aerial",
-  "categoryLabel": "Aerial",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p04.svg",
-  "thumb": "assets/placeholder/p04.svg",
-  "alt": "Real Estate placeholder \u2014 Jake's photo goes here",
-  "category": "real-estate",
-  "categoryLabel": "Real Estate",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p05.svg",
-  "thumb": "assets/placeholder/p05.svg",
-  "alt": "Real Estate placeholder \u2014 Jake's photo goes here",
-  "category": "real-estate",
-  "categoryLabel": "Real Estate",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p06.svg",
-  "thumb": "assets/placeholder/p06.svg",
-  "alt": "Real Estate placeholder \u2014 Jake's photo goes here",
-  "category": "real-estate",
-  "categoryLabel": "Real Estate",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p07.svg",
-  "thumb": "assets/placeholder/p07.svg",
-  "alt": "Events placeholder \u2014 Jake's photo goes here",
-  "category": "events",
-  "categoryLabel": "Events",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p08.svg",
-  "thumb": "assets/placeholder/p08.svg",
-  "alt": "Events placeholder \u2014 Jake's photo goes here",
-  "category": "events",
-  "categoryLabel": "Events",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p09.svg",
-  "thumb": "assets/placeholder/p09.svg",
-  "alt": "Automotive placeholder \u2014 Jake's photo goes here",
-  "category": "automotive",
-  "categoryLabel": "Automotive",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p10.svg",
-  "thumb": "assets/placeholder/p10.svg",
-  "alt": "Automotive placeholder \u2014 Jake's photo goes here",
-  "category": "automotive",
-  "categoryLabel": "Automotive",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p11.svg",
-  "thumb": "assets/placeholder/p11.svg",
-  "alt": "Trap Houses placeholder \u2014 Jake's photo goes here",
-  "category": "trap-houses",
-  "categoryLabel": "Trap Houses",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p12.svg",
-  "thumb": "assets/placeholder/p12.svg",
-  "alt": "Trap Houses placeholder \u2014 Jake's photo goes here",
-  "category": "trap-houses",
-  "categoryLabel": "Trap Houses",
-  "w": 1200,
-  "h": 800
- },
- {
-  "src": "assets/placeholder/p13.svg",
-  "thumb": "assets/placeholder/p13.svg",
-  "alt": "Trap Houses placeholder \u2014 Jake's photo goes here",
-  "category": "trap-houses",
-  "categoryLabel": "Trap Houses",
-  "w": 1200,
-  "h": 800
+  "categoryLabel": "Aerial"
  }
 ]

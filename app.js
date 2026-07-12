@@ -1,8 +1,6 @@
 /* Gallery is data-driven: assets/gallery.json is generated from the photos/
    folder by scripts/build_gallery.py (run by GitHub Actions on every push). */
 
-const TRAP = "trap-houses"; // rendered in its own bottom section, not the Work grid
-
 const state = { items: [], filter: "all", lightboxItems: [], lightboxIndex: 0 };
 
 const $ = (id) => document.getElementById(id);
@@ -16,16 +14,11 @@ async function loadGallery() {
   state.items = items;
   buildFilters();
   renderGallery();
-  renderTrapHouses();
-}
-
-function workItems() {
-  return state.items.filter((i) => i.category !== TRAP);
 }
 
 function categories() {
   const seen = new Map();
-  for (const item of workItems()) {
+  for (const item of state.items) {
     if (!seen.has(item.category)) seen.set(item.category, item.categoryLabel || item.category);
   }
   return seen;
@@ -52,14 +45,15 @@ function buildFilters() {
 }
 
 function visibleItems() {
-  if (state.filter === "all") return workItems();
-  return workItems().filter((i) => i.category === state.filter);
+  if (state.filter === "all") return state.items;
+  return state.items.filter((i) => i.category === state.filter);
 }
 
 function renderInto(container, items) {
   container.innerHTML = "";
   items.forEach((item, i) => {
     const fig = document.createElement("figure");
+    fig.dataset.category = item.category || "";
     if (item.w && item.h && item.w / item.h > 2) fig.classList.add("wide");
     if (item.type === "video") fig.classList.add("is-video");
     const img = document.createElement("img");
@@ -82,14 +76,6 @@ function renderGallery() {
   const items = visibleItems();
   renderInto($("gallery"), items);
   $("gallery-empty").hidden = items.length > 0;
-}
-
-function renderTrapHouses() {
-  const items = state.items.filter((i) => i.category === TRAP);
-  const section = document.getElementById("trap-houses");
-  if (!section) return;
-  section.hidden = items.length === 0;
-  renderInto($("trap-gallery"), items);
 }
 
 /* Lightbox */

@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
-<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="#7A8B99"/><stop offset="0.55" stop-color="#AEBCC6"/><stop offset="1" stop-color="#E0E3E0"/>
-</linearGradient></defs>
-<rect width="1200" height="800" fill="url(#g)"/>
-<circle cx="830" cy="313" r="52" fill="#FFFFFF" opacity="0.55"/>
-<path d="M0 647 L300 659 L620 633 L900 649 L1200 577 L1200 800 L0 800 Z" fill="#2E3B33" opacity="0.16"/>
-<text x="60" y="740" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#0E1214" opacity="0.35">Automotive — placeholder</text>
-</svg>
