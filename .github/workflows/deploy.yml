@@ -28,3 +28,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
+          # Custom domain — written into gh-pages on every deploy so the
+          # Pages custom-domain setting survives rebuilds.
+          cname: jdaerialphotography.com
