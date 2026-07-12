@@ -1,7 +1,9 @@
 /* Gallery is data-driven: assets/gallery.json is generated from the photos/
    folder by scripts/build_gallery.py (run by GitHub Actions on every push). */
 
-const state = { items: [], filter: "all", lightboxIndex: 0 };
+const TRAP = "trap-houses"; // rendered in its own bottom section, not the Work grid
+
+const state = { items: [], filter: "all", lightboxItems: [], lightboxIndex: 0 };
 
 const $ = (id) => document.getElementById(id);
 
@@ -14,11 +16,16 @@ async function loadGallery() {
   state.items = items;
   buildFilters();
   renderGallery();
+  renderTrapHouses();
+}
+
+function workItems() {
+  return state.items.filter((i) => i.category !== TRAP);
 }
 
 function categories() {
   const seen = new Map();
-  for (const item of state.items) {
+  for (const item of workItems()) {
     if (!seen.has(item.category)) seen.set(item.category, item.categoryLabel || item.category);
   }
   return seen;
@@ -45,16 +52,12 @@ function buildFilters() {
 }
 
 function visibleItems() {
-  if (state.filter === "all") return state.items;
-  return state.items.filter((i) => i.category === state.filter);
+  if (state.filter === "all") return workItems();
+  return workItems().filter((i) => i.category === state.filter);
 }
 
-function renderGallery() {
-  const gallery = $("gallery");
-  const items = visibleItems();
-  gallery.innerHTML = "";
-  $("gallery-empty").hidden = items.length > 0;
-
+function renderInto(container, items) {
+  container.innerHTML = "";
   items.forEach((item, i) => {
     const fig = document.createElement("figure");
     if (item.w && item.h && item.w / item.h > 2) fig.classList.add("wide");
@@ -64,26 +67,41 @@ function renderGallery() {
     img.alt = item.alt || "";
     img.loading = "lazy";
     fig.appendChild(img);
-    fig.addEventListener("click", () => openLightbox(i));
+    fig.addEventListener("click", () => openLightbox(items, i));
     fig.tabIndex = 0;
     fig.setAttribute("role", "button");
     fig.setAttribute("aria-label", "View larger: " + (item.alt || "photo"));
     fig.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLightbox(i); }
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLightbox(items, i); }
     });
-    gallery.appendChild(fig);
+    container.appendChild(fig);
   });
 }
 
+function renderGallery() {
+  const items = visibleItems();
+  renderInto($("gallery"), items);
+  $("gallery-empty").hidden = items.length > 0;
+}
+
+function renderTrapHouses() {
+  const items = state.items.filter((i) => i.category === TRAP);
+  const section = document.getElementById("trap-houses");
+  if (!section) return;
+  section.hidden = items.length === 0;
+  renderInto($("trap-gallery"), items);
+}
+
 /* Lightbox */
-function openLightbox(index) {
+function openLightbox(items, index) {
+  state.lightboxItems = items;
   state.lightboxIndex = index;
   updateLightbox();
   $("lightbox").showModal();
 }
 
 function updateLightbox() {
-  const items = visibleItems();
+  const items = state.lightboxItems;
   const item = items[state.lightboxIndex];
   if (!item) return;
   const img = $("lb-img");
@@ -109,7 +127,8 @@ function updateLightbox() {
 }
 
 function stepLightbox(delta) {
-  const n = visibleItems().length;
+  const n = state.lightboxItems.length;
+  if (!n) return;
   state.lightboxIndex = (state.lightboxIndex + delta + n) % n;
   updateLightbox();
 }
