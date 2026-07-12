@@ -43,6 +43,7 @@ CATEGORY_LABELS = {
     "real-estate": "Real Estate",
     "events": "Events",
     "automotive": "Automotive",
+    "trap-houses": "Trap Houses",  # rendered in its own bottom section
 }
 
 WEB_EDGE = 2000   # long edge for lightbox image

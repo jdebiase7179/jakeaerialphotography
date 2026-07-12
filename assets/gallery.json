@@ -88,5 +88,32 @@
   "categoryLabel": "Automotive",
   "w": 1200,
   "h": 800
+ },
+ {
+  "src": "assets/placeholder/p11.svg",
+  "thumb": "assets/placeholder/p11.svg",
+  "alt": "Trap Houses placeholder \u2014 Jake's photo goes here",
+  "category": "trap-houses",
+  "categoryLabel": "Trap Houses",
+  "w": 1200,
+  "h": 800
+ },
+ {
+  "src": "assets/placeholder/p12.svg",
+  "thumb": "assets/placeholder/p12.svg",
+  "alt": "Trap Houses placeholder \u2014 Jake's photo goes here",
+  "category": "trap-houses",
+  "categoryLabel": "Trap Houses",
+  "w": 1200,
+  "h": 800
+ },
+ {
+  "src": "assets/placeholder/p13.svg",
+  "thumb": "assets/placeholder/p13.svg",
+  "alt": "Trap Houses placeholder \u2014 Jake's photo goes here",
+  "category": "trap-houses",
+  "categoryLabel": "Trap Houses",
+  "w": 1200,
+  "h": 800
  }
 ]

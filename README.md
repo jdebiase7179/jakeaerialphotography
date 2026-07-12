@@ -13,6 +13,7 @@ photos/
   real-estate/
   events/
   automotive/
+  trap-houses/   <- shows in its own "Trap Houses" section at the bottom
 ```
 
 Within ~2 minutes of a push, the site rebuilds itself: images are resized
@@ -58,7 +59,7 @@ renamed again, update the URLs in `index.html` (canonical/og),
 - **FAA Part 107** — the site claims it (as "licensed drone pilot" +
   facts strip). Flying drones commercially legally requires this cert —
   confirm Jake actually has it before launch, or remove the claim.
-- **"Insured" claim in About** — same: verify or remove.
+  (The "insured" claim was already removed — Jake isn't insured.)
 - **Custom domain** — later, if wanted: buy domain → repo Settings → Pages →
   Custom domain. Then add proper `og:url`/`og:image` absolute URLs.
 

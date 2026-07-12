@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#8C8F98"/><stop offset="0.6" stop-color="#B5B2AC"/><stop offset="1" stop-color="#6E6A5F"/>
+</linearGradient></defs>
+<rect width="1200" height="800" fill="url(#g)"/>
+<rect x="0" y="620" width="1200" height="180" fill="#3A3A32" opacity="0.5"/>
+<g opacity="0.75">
+<rect x="507" y="380" width="360" height="260" fill="#2E2B28"/>
+<polygon points="477,380 687,280 897,380" fill="#26231F"/>
+<rect x="547" y="430" width="70" height="80" fill="#171513"/>
+<rect x="747" y="430" width="70" height="80" fill="#171513"/>
+<line x1="547" y1="440" x2="617" y2="500" stroke="#4A443C" stroke-width="10"/>
+<line x1="617" y1="440" x2="547" y2="500" stroke="#4A443C" stroke-width="10"/>
+<rect x="647" y="520" width="80" height="120" fill="#1C1A17"/>
+</g>
+<g stroke="#3E4234" stroke-width="6" opacity="0.6">
+<line x1="120" y1="660" x2="130" y2="610"/><line x1="160" y1="665" x2="155" y2="615"/>
+<line x1="980" y1="655" x2="995" y2="605"/><line x1="1030" y1="660" x2="1025" y2="612"/>
+</g>
+<text x="60" y="740" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#F1EFE8" opacity="0.5">Trap Houses — placeholder</text>
+</svg>
