@@ -56,10 +56,8 @@ renamed again, update the URLs in `index.html` (canonical/og),
 - **Portrait** — `assets/img/portrait.jpg` (4:5). Same deal.
 - **Location** — copy avoids naming a city. Once Jake knows his service
   area, add it to the hero lede + title/meta description for local SEO.
-- **FAA Part 107** — the site claims it (as "licensed drone pilot" +
-  facts strip). Flying drones commercially legally requires this cert —
-  confirm Jake actually has it before launch, or remove the claim.
-  (The "insured" claim was already removed — Jake isn't insured.)
+- ~~FAA Part 107~~ — confirmed July 2026: Jake holds the cert, claim stays.
+  (The "insured" claim was removed — Jake isn't insured.)
 - **Custom domain** — later, if wanted: buy domain → repo Settings → Pages →
   Custom domain. Then add proper `og:url`/`og:image` absolute URLs.
 
