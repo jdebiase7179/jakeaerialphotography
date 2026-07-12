@@ -38,15 +38,13 @@ Notes:
 - Placeholder images show until the first real photo lands, then they're
   dropped from the build automatically.
 
-## One-time setup still needed (requires Jake's GitHub login)
+## Hosting (done — July 2026)
 
-1. **Make the repo public** — Settings → General → Danger Zone → Change
-   visibility → Public. GitHub Pages is free only on public repos, and the
-   deploy will fail until this is done.
-2. After that, re-run the failed "Build and deploy site" workflow (Actions
-   tab → the failed run → Re-run all jobs) or just push anything. The
-   workflow enables Pages by itself. Site lands at
-   `https://jdebiase7179.github.io/portfoliosite/`.
+Live at `https://jdebiase7179.github.io/jakeaerialphotography/`.
+Repo is public, Pages serves the `gh-pages` branch, and every push to
+`main` rebuilds and republishes automatically. If the repo is ever
+renamed again, update the URLs in `index.html` (canonical/og),
+`sitemap.xml`, and `robots.txt` to match.
 
 ## Content TODOs (placeholders in place, swap when known)
 
