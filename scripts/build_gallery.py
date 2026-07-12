@@ -14,6 +14,7 @@ Usage: python3 scripts/build_gallery.py   (requires Pillow)
 import json
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -29,8 +30,11 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "_site"
 PHOTOS = ROOT / "photos"
 
-STATIC = ["index.html", "styles.css", "app.js", "assets"]
+STATIC = ["index.html", "styles.css", "app.js", "assets",
+          "robots.txt", "sitemap.xml", "404.html"]
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".heic", ".tif", ".tiff"}
+VIDEO_EXTS = {".mp4", ".mov", ".webm", ".m4v"}
+MAX_VIDEO_MB = 90  # GitHub rejects files over 100 MB anyway
 
 # Folder name -> label shown on the filter buttons. Folders not listed here
 # still work; they get a title-cased label automatically.
@@ -78,6 +82,44 @@ def process(src: Path, dest_dir: Path) -> dict:
     }
 
 
+def ffmpeg_available() -> bool:
+    return shutil.which("ffmpeg") is not None
+
+
+def process_video(src: Path, dest_dir: Path) -> dict:
+    """Copy (or transcode) a video and derive poster + thumbnail from it."""
+    size_mb = src.stat().st_size / 1e6
+    if size_mb > MAX_VIDEO_MB:
+        raise ValueError(f"{size_mb:.0f} MB — too large, keep clips under {MAX_VIDEO_MB} MB")
+    dest_dir.mkdir(parents=True, exist_ok=True)
+
+    if src.suffix.lower() == ".mp4":
+        video_path = dest_dir / src.name
+        shutil.copy2(src, video_path)
+    else:  # .mov etc. — transcode to browser-safe H.264 mp4
+        video_path = dest_dir / (src.stem + ".mp4")
+        subprocess.run(
+            ["ffmpeg", "-y", "-loglevel", "error", "-i", str(src),
+             "-c:v", "libx264", "-preset", "medium", "-crf", "23",
+             "-pix_fmt", "yuv420p", "-movflags", "+faststart",
+             "-c:a", "aac", str(video_path)],
+            check=True,
+        )
+
+    poster_raw = dest_dir / (src.stem + "_frame.jpg")
+    subprocess.run(
+        ["ffmpeg", "-y", "-loglevel", "error", "-ss", "1", "-i", str(video_path),
+         "-frames:v", "1", str(poster_raw)],
+        check=True,
+    )
+    entry = process(poster_raw, dest_dir)
+    poster_raw.unlink()
+    entry["poster"] = entry.pop("src")
+    entry["src"] = str(video_path.relative_to(OUT))
+    entry["type"] = "video"
+    return entry
+
+
 def main() -> None:
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -86,7 +128,7 @@ def main() -> None:
         src = ROOT / name
         if src.is_dir():
             shutil.copytree(src, OUT / name)
-        else:
+        elif src.exists():
             shutil.copy2(src, OUT / name)
 
     items = []
@@ -97,10 +139,18 @@ def main() -> None:
             category = cat_dir.name
             label = CATEGORY_LABELS.get(category, category.replace("-", " ").title())
             for photo in sorted(cat_dir.iterdir(), reverse=True):
-                if photo.suffix.lower() not in IMAGE_EXTS:
-                    continue
+                ext = photo.suffix.lower()
+                dest = OUT / "assets" / "gallery" / category
                 try:
-                    entry = process(photo, OUT / "assets" / "gallery" / category)
+                    if ext in IMAGE_EXTS:
+                        entry = process(photo, dest)
+                    elif ext in VIDEO_EXTS:
+                        if not ffmpeg_available():
+                            print(f"SKIPPED {photo}: ffmpeg not installed", file=sys.stderr)
+                            continue
+                        entry = process_video(photo, dest)
+                    else:
+                        continue
                 except Exception as exc:  # a bad file shouldn't sink the deploy
                     print(f"SKIPPED {photo}: {exc}", file=sys.stderr)
                     continue

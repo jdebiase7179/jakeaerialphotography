@@ -205,6 +205,19 @@ img[data-missing] { opacity: 0; }
   transition: transform 0.4s ease;
 }
 .gallery figure:hover img { transform: scale(1.03); }
+.gallery figure.is-video { position: relative; }
+.gallery figure.is-video::after {
+  content: "▶";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.28) 0%, transparent 45%);
+  pointer-events: none;
+}
 
 /* Services */
 .service-row {
@@ -296,7 +309,8 @@ footer a:hover { color: var(--accent); }
   max-height: 92vh;
 }
 .lightbox::backdrop { background: rgba(10, 14, 16, 0.92); }
-.lightbox img {
+.lightbox img,
+.lightbox video {
   max-width: min(92vw, 1400px);
   max-height: 82vh;
   width: auto;

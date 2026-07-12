@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jdebiase7179.github.io/portfoliosite/sitemap.xml

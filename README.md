@@ -3,9 +3,9 @@
 Portfolio + booking site. Static HTML/CSS/JS, deployed to GitHub Pages by a
 GitHub Action that also builds the photo gallery automatically.
 
-## How Jake adds photos (no code, ever)
+## How Jake adds photos & videos (no code, ever)
 
-Drop image files into a category folder and get them onto `main`:
+Drop image or video files into a category folder and get them onto `main`:
 
 ```
 photos/
@@ -27,6 +27,10 @@ Easiest paths, in order:
 3. **Locally** — copy files into `photos/<category>/`, commit, push.
 
 Notes:
+- **Videos work too**: `.mp4` / `.mov` clips dropped in the same folders show
+  in the gallery with a play button and play in the lightbox. `.mov` is
+  auto-converted for browsers. Keep clips under 90 MB (GitHub's limit) —
+  export short highlight cuts, not full flights.
 - Filenames become captions: `sunset-over-marina.jpg` → "Sunset over marina".
   Camera prefixes like `DJI_0231` are stripped automatically.
 - Delete a file from `photos/` and it disappears from the site the same way.

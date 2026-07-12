@@ -58,8 +58,9 @@ function renderGallery() {
   items.forEach((item, i) => {
     const fig = document.createElement("figure");
     if (item.w && item.h && item.w / item.h > 2) fig.classList.add("wide");
+    if (item.type === "video") fig.classList.add("is-video");
     const img = document.createElement("img");
-    img.src = item.thumb || item.src;
+    img.src = item.thumb || item.poster || item.src;
     img.alt = item.alt || "";
     img.loading = "lazy";
     fig.appendChild(img);
@@ -85,8 +86,22 @@ function updateLightbox() {
   const items = visibleItems();
   const item = items[state.lightboxIndex];
   if (!item) return;
-  $("lb-img").src = item.src;
-  $("lb-img").alt = item.alt || "";
+  const img = $("lb-img");
+  const video = $("lb-video");
+  video.pause();
+  if (item.type === "video") {
+    img.hidden = true;
+    video.hidden = false;
+    video.poster = item.poster || "";
+    video.src = item.src;
+    video.play().catch(() => {});
+  } else {
+    video.removeAttribute("src");
+    video.hidden = true;
+    img.hidden = false;
+    img.src = item.src;
+    img.alt = item.alt || "";
+  }
   $("lb-caption").textContent = item.alt || "";
   const solo = items.length < 2;
   $("lb-prev").hidden = solo;
@@ -101,6 +116,7 @@ function stepLightbox(delta) {
 
 function initLightbox() {
   const box = $("lightbox");
+  box.addEventListener("close", () => $("lb-video").pause());
   $("lb-close").addEventListener("click", () => box.close());
   $("lb-prev").addEventListener("click", () => stepLightbox(-1));
   $("lb-next").addEventListener("click", () => stepLightbox(1));
