@@ -106,7 +106,7 @@ function updateLightbox() {
     img.src = item.src;
     img.alt = item.alt || "";
   }
-  $("lb-caption").textContent = item.alt || "";
+  $("lb-caption").textContent = "";  // no filename caption in the lightbox
   const solo = items.length < 2;
   $("lb-prev").hidden = solo;
   $("lb-next").hidden = solo;
