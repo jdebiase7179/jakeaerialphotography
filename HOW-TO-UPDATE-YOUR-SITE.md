@@ -1,6 +1,6 @@
 # How to update your site (for Jake)
 
-Your site: **https://jdebiase7179.github.io/jakeaerialphotography/**
+Your site: **https://jdaerialphotography.com/**
 
 You don't need to install anything or write any code, ever. Everything
 below happens on the GitHub website in a normal browser, logged in as you.
@@ -13,11 +13,10 @@ Do it from a computer — the phone app doesn't do uploads well.
 1. Open **https://github.com/jdebiase7179/jakeaerialphotography/tree/main/photos**
    (bookmark this)
 2. Click the folder the shots belong in:
-   - `aerial` — general drone shots
    - `real-estate` — listings
    - `events` — events
    - `automotive` — car stuff
-   - `trap-houses` — the abandoned houses section
+   - `landscapes` — scenery / general drone shots
 3. Click **Add file** (top right) → **Upload files**
 4. Drag your photos/videos into the box
 5. Click the green **Commit changes** button
