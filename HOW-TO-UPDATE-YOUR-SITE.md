@@ -10,16 +10,23 @@ Do it from a computer — the phone app doesn't do uploads well.
 
 ## Add photos or videos
 
-1. Open **https://github.com/jdebiase7179/jakeaerialphotography/tree/main/photos**
-   (bookmark this)
-2. Click the folder the shots belong in:
-   - `real-estate` — listings
-   - `events` — events
-   - `automotive` — car stuff
-   - `landscapes` — scenery / general drone shots
-3. Click **Add file** (top right) → **Upload files**
-4. Drag your photos/videos into the box
-5. Click the green **Commit changes** button
+Bookmark these — each link goes STRAIGHT to the upload screen for that
+category (you must be signed in to GitHub, on a computer):
+
+- **Real estate:** https://github.com/jdebiase7179/jakeaerialphotography/upload/main/photos/real-estate
+- **Events:** https://github.com/jdebiase7179/jakeaerialphotography/upload/main/photos/events
+- **Automotive:** https://github.com/jdebiase7179/jakeaerialphotography/upload/main/photos/automotive
+- **Landscapes:** https://github.com/jdebiase7179/jakeaerialphotography/upload/main/photos/landscapes
+
+1. Open the link for the right category
+2. Drag your photos/videos into the box
+3. Click the green **Commit changes** button
+
+(If you'd rather browse there by hand: open the repo, click into
+`photos/` then a category folder — the **Add file ▾ → Upload files**
+button is at the top right, next to the green button. On a narrow
+window it shrinks to a **+** or hides under **⋯**. It does NOT exist
+on phones — computer only.)
 
 **Wait about 2 minutes, refresh your site, they're live.** Big files
 straight off the drone are fine — the site shrinks them automatically.
