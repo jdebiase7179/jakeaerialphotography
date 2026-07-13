@@ -36,6 +36,15 @@
   "categoryLabel": "Landscapes"
  },
  {
+  "src": "assets/gallery/real-estate/house-color-graded.jpg",
+  "thumb": "assets/gallery/real-estate/house-color-graded_thumb.jpg",
+  "w": 1672,
+  "h": 941,
+  "alt": "Real Estate \u2014 House color graded",
+  "category": "real-estate",
+  "categoryLabel": "Real Estate"
+ },
+ {
   "src": "assets/gallery/real-estate/Pike-House-color-graded.jpg",
   "thumb": "assets/gallery/real-estate/Pike-House-color-graded_thumb.jpg",
   "w": 1626,
