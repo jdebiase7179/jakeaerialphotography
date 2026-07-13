@@ -40,25 +40,22 @@ Notes:
 
 ## Hosting (done — July 2026)
 
-Live at `https://jdebiase7179.github.io/jakeaerialphotography/`.
-Repo is public, Pages serves the `gh-pages` branch, and every push to
-`main` rebuilds and republishes automatically. If the repo is ever
-renamed again, update the URLs in `index.html` (canonical/og),
-`sitemap.xml`, and `robots.txt` to match.
+Live at `https://jdaerialphotography.com/` (custom domain; the old
+`jdebiase7179.github.io/jakeaerialphotography` address serves the same
+site). Repo is public, Pages serves the `gh-pages` branch — the workflow
+writes the CNAME on every deploy — and every push to `main` rebuilds and
+republishes automatically. If the domain ever changes, update the URLs in
+`index.html` (canonical/og), `sitemap.xml`, and `robots.txt` to match.
 
-## Content TODOs (placeholders in place, swap when known)
+## Content TODOs
 
-- **Email** — `hello@example.com` in `index.html` (2 places). Replace with
-  Jake's real booking email.
-- **Hero photo** — drop Jake's best shot at `assets/img/hero.jpg` (16:9-ish,
-  ~2400px wide). Gradient placeholder shows until then.
-- **Portrait** — `assets/img/portrait.jpg` (4:5). Same deal.
-- **Location** — copy avoids naming a city. Once Jake knows his service
+Done: real email + phone wired up, hero photo, portrait, FAA Part 107
+confirmed (claim stays; "insured" was removed — Jake isn't insured),
+custom domain live.
+
+Still open:
+- **Location** — copy avoids naming a city. Once Jake settles his service
   area, add it to the hero lede + title/meta description for local SEO.
-- ~~FAA Part 107~~ — confirmed July 2026: Jake holds the cert, claim stays.
-  (The "insured" claim was removed — Jake isn't insured.)
-- **Custom domain** — later, if wanted: buy domain → repo Settings → Pages →
-  Custom domain. Then add proper `og:url`/`og:image` absolute URLs.
 
 ## Local development
 
