@@ -1,28 +1,46 @@
 [
  {
-  "src": "assets/gallery/landscapes/placeholder-landscape.jpg",
-  "thumb": "assets/gallery/landscapes/placeholder-landscape_thumb.jpg",
-  "w": 1600,
-  "h": 1000,
-  "alt": "Landscapes \u2014 Placeholder landscape",
+  "src": "assets/gallery/landscapes/storm-color-graded.jpg",
+  "thumb": "assets/gallery/landscapes/storm-color-graded_thumb.jpg",
+  "w": 1670,
+  "h": 941,
+  "alt": "Landscapes \u2014 Storm color graded",
   "category": "landscapes",
   "categoryLabel": "Landscapes"
  },
  {
-  "src": "assets/gallery/real-estate/IMG_2831.jpg",
-  "thumb": "assets/gallery/real-estate/IMG_2831_thumb.jpg",
-  "w": 1179,
-  "h": 649,
-  "alt": "Real Estate \u2014 Photo",
-  "category": "real-estate",
-  "categoryLabel": "Real Estate"
+  "src": "assets/gallery/landscapes/golf-course-color-graded.jpg",
+  "thumb": "assets/gallery/landscapes/golf-course-color-graded_thumb.jpg",
+  "w": 1736,
+  "h": 906,
+  "alt": "Landscapes \u2014 Golf course color graded",
+  "category": "landscapes",
+  "categoryLabel": "Landscapes"
  },
  {
-  "src": "assets/gallery/real-estate/IMG_2825.jpg",
-  "thumb": "assets/gallery/real-estate/IMG_2825_thumb.jpg",
-  "w": 1179,
-  "h": 638,
-  "alt": "Real Estate \u2014 Photo",
+  "src": "assets/gallery/landscapes/Golf-course-sunset-color-graded.jpg",
+  "thumb": "assets/gallery/landscapes/Golf-course-sunset-color-graded_thumb.jpg",
+  "w": 1688,
+  "h": 932,
+  "alt": "Landscapes \u2014 Golf course sunset color graded",
+  "category": "landscapes",
+  "categoryLabel": "Landscapes"
+ },
+ {
+  "src": "assets/gallery/landscapes/Farm-color-graded.jpg",
+  "thumb": "assets/gallery/landscapes/Farm-color-graded_thumb.jpg",
+  "w": 1701,
+  "h": 925,
+  "alt": "Landscapes \u2014 Farm color graded",
+  "category": "landscapes",
+  "categoryLabel": "Landscapes"
+ },
+ {
+  "src": "assets/gallery/real-estate/Pike-House-color-graded.jpg",
+  "thumb": "assets/gallery/real-estate/Pike-House-color-graded_thumb.jpg",
+  "w": 1626,
+  "h": 967,
+  "alt": "Real Estate \u2014 Pike House color graded",
   "category": "real-estate",
   "categoryLabel": "Real Estate"
  }
