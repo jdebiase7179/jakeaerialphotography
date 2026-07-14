@@ -234,7 +234,7 @@ img[data-missing] { opacity: 0; }
 .service h3 { margin-top: 0; }
 .service p { margin: 0; color: var(--muted); font-size: 0.98rem; }
 
-.note { color: var(--muted); font-size: 0.95rem; margin-top: 20px; }
+.note { color: var(--muted); font-size: 0.95rem; margin-top: 20px; max-width: none; }
 
 /* Facts */
 .facts { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
